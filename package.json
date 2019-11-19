@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/minkyukr/Profilegenerator/issues"
   },
-  "homepage": "https://github.com/minkyukr/Profilegenerator#readme"
+  "homepage": "https://github.com/minkyukr/Profilegenerator#readme",
+  "dependencies": {
+    "inquirer": "^7.0.0"
+  }
 }
