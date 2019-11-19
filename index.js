@@ -5,38 +5,43 @@ const util = require("util");
 const writeFileAsync = util.promisify(fs.writeFile);
 
 function promptUser() {
-  return inquirer.prompt([
+return inquirer.prompt([
     {
-      type: "input",
-      name: "name",
-      message: "What is your name?"
+    type: "input",
+    name: "name",
+    message: "What is your name?"
     },
     {
-      type: "input",
-      name: "location",
-      message: "Where are you from?"
+    type: "input",
+    name: "location",
+    message: "Where are you from?"
     },
     {
-      type: "input",
-      name: "hobby",
-      message: "What is your favorite hobby?"
+    type: "input",
+    name: "publicrepos",
+    message: "How many public repos do you have?"
     },
     {
-      type: "input",
-      name: "food",
-      message: "What is your favorite food?"
+    type: "input",
+    name: "followers",
+    message: "How many followers do you have?"
     },
     {
-      type: "input",
-      name: "github",
-      message: "Enter your GitHub Username"
+    type: "input",
+    name: "githubstars",
+    message: "How many GitHub Stars do you have?"
     },
     {
-      type: "input",
-      name: "linkedin",
-      message: "Enter your LinkedIn URL."
+    type: "input",
+    name: "following",
+    message: "How many followings do you have?"
     }
-  ]);
+    {
+    type: "input",
+    name: "githublink",
+    message: "What is your github link?"
+    }
+]);
 }
 
 function generateHTML(answers) {
@@ -54,12 +59,13 @@ function generateHTML(answers) {
   <div class="container">
     <h1 class="display-4">Hi! My name is ${answers.name}</h1>
     <p class="lead">I am from ${answers.location}.</p>
-    <h3>Example heading <span class="badge badge-secondary">Contact Me</span></h3>
+    <h3><span class="badge badge-secondary">Contact Me</span></h3>
     <ul class="list-group">
-      <li class="list-group-item">My GitHub username is ${answers.github}</li>
-      <li class="list-group-item">LinkedIn: ${answers.linkedin}</li>
-      <li class="list-group-item">Followers ${answers.github}</li>
-      <li class="list-group-item">GitHub Stars: ${answers.linkedin}</li>
+      <li class="list-group-item">Public Repos: ${answers.publicrepos}</li>
+      <li class="list-group-item">Followers: ${answers.followers}</li>
+      <li class="list-group-item">GitHub Stars ${answers.githubstars}</li>
+      <li class="list-group-item">Following: ${answers.following}</li>
+      <li class="list-group-item">GitHub Link: ${answers.githublink}</li>
     </ul>
   </div>
 </div>
