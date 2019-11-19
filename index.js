@@ -35,7 +35,7 @@ return inquirer.prompt([
     type: "input",
     name: "following",
     message: "How many followings do you have?"
-    }
+    },
     {
     type: "input",
     name: "githublink",
@@ -55,7 +55,7 @@ function generateHTML(answers) {
   <title>Document</title>
 </head>
 <body>
-  <div class="jumbotron jumbotron-fluid">
+  <div class="jumbotron jumbotron-fluid blue">
   <div class="container">
     <h1 class="display-4">Hi! My name is ${answers.name}</h1>
     <p class="lead">I am from ${answers.location}.</p>
